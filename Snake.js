@@ -27,7 +27,7 @@ function move(event) {
 
     snake.style.top = (snk.updown()) + "px";
     snake.style.left = (snk.leftright()) + "px";
-    // test
+    // test #2
 }
 
 document.addEventListener('keydown', move);
