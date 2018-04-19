@@ -1,3 +1,21 @@
+var snake = document.getElementById('snake');
+var xpos = 0;
+var ypos = 0;
+var id = setInterval(frame, 5);
+
+function frame() {
+
+    if (xpos == 350)
+        clearInterval(id);
+}
+else {
+    xpos++;
+    ypos++;
+    snake.style.top = ypos + 'px';
+
+}
+
+
 function move(event) {
         var snake= document.getElementById('snake');
        var snk = {
