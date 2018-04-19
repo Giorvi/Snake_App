@@ -1,14 +1,14 @@
  #container {
      width: 500px;
      height: 500px;
-     background color: aqua;
+     background-color: aqua;
      padding: 0;
      margin: 03;
  }
 
  #snake {
-     border: 1px solid darkgreen;
-     width: 30px;
+     border: 1px solid red;
+     width: 25px;
      height: 25px;
      background-color: darkgreen;
      position: absolute;
