@@ -5,7 +5,7 @@ function move(event) {
                 // takes a string and returns integers => the y vlues of the snake object.
                 var y = parseInt(getComputedStyle(snake).top);
                 if (event.keyCode == 38) {
-                    --y;
+                    y = y - 1;
                 } else if (event.keyCode == 40) {
                     ++y;
                 }
@@ -27,7 +27,7 @@ function move(event) {
 
     snake.style.top = (snk.updown()) + "px";
     snake.style.left = (snk.leftright()) + "px";
-    
+    // test #2
 }
 
 document.addEventListener('keydown', move);
