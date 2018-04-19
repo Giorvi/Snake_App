@@ -1,5 +1,4 @@
-
-#home {
+ #container {
       width: 500px;
       height: 500px;
       background color: aqua;
@@ -10,16 +9,26 @@
       padding: 0;
       margin: 03;
 
-    }
+    } 
 #snake {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
+    border: 1px solid darkgreen;
+    width: 30px;
+    height: 25px;
+    background-color: darkgreen;
     position: absolute;
     left: 100px;
     top: 100px;
 }
-button {
+#apple {
+    border: 1px solid darkgreen;
+    width: 30px;
+    height: 25px;
+    background-color: red;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+ button {
       background-color: green;
       color: white;
       border: none;
@@ -31,5 +40,5 @@ button {
       margin: 10px 0 0 0;
     }
 button:hover {
-    background-color: orangered;
-}
+    background-color: red;
+} 
