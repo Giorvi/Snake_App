@@ -1,51 +1,44 @@
-var snake = document.getElementById('snake');
+var snake = document.getElementById("snake");
 var xpos = 0;
 var ypos = 0;
+var xstep = 0;
+var ystep = 0;
 var id = setInterval(frame, 5);
 
 function frame() {
 
-    if (xpos == 350)
-        clearInterval(id);
-}
-else {
-    xpos++;
-    ypos++;
+
+    if (xpos > 350 || xpos < 0) {
+        xstep = 0;
+        ystep = 0;
+    }
+    if (ypos > 350 || ypos < 0) {
+        ystep = 0;
+        xstep = 0;
+    }
+
+    xpos = xpos + xstep;
+    ypos = ypos + ystep;
     snake.style.top = ypos + 'px';
-
+    snake.style.left = xpos + 'px';
 }
+window.addEventListener("keypress", changeThingColor);
 
+function changeThingColor(event) {
+    if (event.key === "a") {
+        xstep = -1;
+        ystep = 0;
+    } else if (event.key === "d") {
+        xstep = 1;
+        ystep = 0;
 
-function move(event) {
-        var snake= document.getElementById('snake');
-       var snk = {
-            updown: function () {
-                // takes a string and returns integers => the y vlues of the snake object.
-                var y = parseInt(getComputedStyle(snake).top);
-                if (event.keyCode == 38) {
-                    y = y - 1;
-                } else if (event.keyCode == 40) {
-                    ++y;
-                }
+    } else if (event.key === "w") {
+        ystep = -1;
+        xstep = 0;
 
-                return y;
-            },
+    } else if (event.key === "s") {
+        ystep = 1;
+        xstep = 0;
 
-            leftright: function () {
-                var x = parseInt(getComputedStyle(snake).left);
-                if (event.keyCode == 37) {
-                    --x;
-                } else if (event.keyCode == 39) {
-                    ++x;
-                }
-
-                return x;
-            }
-        };
-
-    snake.style.top = (snk.updown()) + "px";
-    snake.style.left = (snk.leftright()) + "px";
-    // test #2
+    }
 }
-
-document.addEventListener('keydown', move);
