@@ -1,8 +1,7 @@
-
 #home {
       width: 500px;
       height: 500px;
-      background color: aqua;
+      background-image: url('../img/snake.png');
       background-size: auto 350px;
       background-repeat: no-repeat;
       background-color: lightblue;
@@ -11,15 +10,8 @@
       margin: 03;
 
     }
-#snake {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    left: 100px;
-    top: 100px;
-}
-button {
+
+    button {
       background-color: green;
       color: white;
       border: none;
@@ -30,6 +22,23 @@ button {
       width: 90px;
       margin: 10px 0 0 0;
     }
-button:hover {
-    background-color: orangered;
-}
+    button:hover {
+      background-color: orange;
+    }
+
+    button:disabled {
+      background-color: grey;
+    }
+
+    p {
+      font-family: Helvetica;
+      font-weight: bold;
+      width: 250px;
+      margin: 18px 0 5px 8px;
+      float: left;
+    }
+
+    .game {
+      margin: 0 auto;
+    }
+
