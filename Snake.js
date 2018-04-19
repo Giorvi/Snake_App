@@ -1,3 +1,4 @@
+//Giorvi
 var snake = document.getElementById("snake");
 var xpos = 0;
 var ypos = 0;
@@ -42,3 +43,4 @@ function changeThingColor(event) {
 
     }
 }
+//
