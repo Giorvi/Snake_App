@@ -13,3 +13,13 @@
   background: orange;
   top: 0px;
   left: 0px;
+}
+#apple {
+    border: 1px solid darkgreen;
+    width: 30px;
+    height: 25px;
+    background-color: red;
+    position: absolute;
+    left: 100px;
+    top: 300px;
+}
