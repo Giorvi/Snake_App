@@ -22,11 +22,11 @@ var id = setInterval(frame, 5);
 
 function frame() {
 
-    if (xpos > 475 || xpos < 0) {
+    if (xpos > 350 || xpos < 0) {
         xstep = 0;
         ystep = 0;
     }
-    if (ypos >  475 || ypos < 0) {
+    if (ypos >  350 || ypos < 0) {
         ystep = 0;
         xstep = 0;
     }
@@ -56,8 +56,7 @@ function changeThingColor(event) {
         ystep = 1;
         xstep = 0;
 
-    }
-    else if (event.key === "l") {
+
 
     }
     }
