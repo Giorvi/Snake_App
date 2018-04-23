@@ -1,8 +1,8 @@
-var apple = document.getElementById("apple");
-var ypos =  Math.floor(Math.random()*400) + 1;
-var xpos = Math.floor(Math.random()*400) + 1;
-apple.style.top = ypos + "px";
-apple.style.left = xpos + "px";
+//var apple = document.getElementById("apple");
+//var ypos =  Math.floor(Math.random()*400) + 1;
+//var xpos = Math.floor(Math.random()*400) + 1;
+//apple.style.top = ypos + "px";
+//apple.style.left = xpos + "px";
  if (snake.x < apple.x + apple.width &&
    snake.x + snake.width > apple.x &&
    snake.y < apple.y + apple.height &&
