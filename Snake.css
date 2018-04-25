@@ -34,8 +34,15 @@
     cursor: pointer;
 }
 #score{
-    top: 50px;
-    left: 150px;
+    position: fixed;
+    top: 80px;
+    left: 300px;
+
+}
+#point{
+    position:fixed;
+    top: 80px;
+    left: 350px;
     
 }
 #container {

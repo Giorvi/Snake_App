@@ -1,13 +1,7 @@
-    var apple = document.getElementById("apple");
     var score = document.getElementById("score");
-
-    var ypos = Math.floor(Math.random() * 350) + 1;
-    var xpos = Math.floor(Math.random() * 350) + 1;
     var modal = document.getElementById('myModal');
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];
-    apple.style.top = ypos + "px";
-    apple.style.left = xpos + "px";
     /* if (snake.x < apple.x + apple.width &&
         snake.x + snake.width > apple.x &&
         snake.y < apple.y + apple.height &&
