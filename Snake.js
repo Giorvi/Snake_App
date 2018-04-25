@@ -10,7 +10,8 @@ var snake = document.getElementById("snake"),
 
     // Danielle
     apple = document.getElementById("apple"),
-    //appleX = 200,
+    appleX = 200,
+    appleY = 200,
     appleYpos = Math.floor(Math.random() * 350) + 1,
     appleXpos = Math.floor(Math.random() * 350) + 1;
 
@@ -42,7 +43,7 @@ function frame() {
         ystep = 0;
         xstep = 0;
     }
-    if (xpos > appleX  ) {
+    if (xpos > appleX && ypos > appleY) {
         apple.style.top = appleYpos + "px";
         apple.style.left = appleXpos + "px";
     }
