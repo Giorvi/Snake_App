@@ -6,17 +6,16 @@ var snake = document.getElementById("snake"),
     ypos = 0,
     xstep = 0,
     ystep = 0,
-    id = setInterval(frame, 5),
+    id = setInterval(frame, 1),
 
     // Danielle
     apple = document.getElementById("apple"),
-    appleX = 200,
-    appleY = 200,
-    // appleX = 200,
     appleYpos = Math.floor(Math.random() * 350) + 1,
-    appleXpos = Math.floor(Math.random() * 350) + 1;
-    apple.style.top = appleYpos + "px";
-    apple.style.left = appleXpos + "px";
+    appleXpos = Math.floor(Math.random() * 350) + 1,
+appleX = appleXpos,
+appleY = appleYpos;
+    //apple.style.top = appleYpos + "px";
+    //apple.style.left = appleXpos + "px";
 
 // Giorvi
 function drawSnake() {
@@ -46,27 +45,25 @@ function frame() {
         ystep = 0;
         xstep = 0;
     }
-    //if (xpos > appleX && ypos > appleY) {
-    if (xpos > appleXpos && ypos < appleYpos) {
-        apple.style.top = appleYpos + "px";
-        apple.style.left = appleXpos + "px";
+    if (xpos >= appleX && ypos >= appleY) {
+        apple.style.left = appleX + "px";
+        apple.style.top = appleY + "px";
     }
-
+      /* if (snake.x < apple.x + apple.width &&
+        snake.x + snake.width > apple.x &&
+        snake.y < apple.y + apple.height &&
+        snake.height + snake.y > apple.y) {
+        var yposition = Math.floor(Math.random() * 400) + 1;
+        var xposition = Math.floor(Math.random() * 400) + 1;
+        apple.style.top = yposition + "px";
+        apple.style.left = xposition + "px";
+    } */
 
     xpos = xpos + xstep;
     ypos = ypos + ystep;
     snake.style.top = ypos + 'px';
     snake.style.left = xpos + 'px';
 
-    if (xpos < appleXpos + apple.style.width &&
-        xpos + snake.style.width > appleXpos &&
-        ypos < appleYpos + apple.style.height &&
-        snake.style.height + ypos > appleYpos) {
-        var yposition = Math.floor(Math.random() * 350) + 1;
-        var xposition = Math.floor(Math.random() * 350) + 1;
-        apple.style.top = appleYpos + "px";
-        apple.style.left = appleXpos + "px";
-    }
 
     if (xpos => appleXpos && xpos <= (appleXpos + apple.style.width)) {
         document.getElementById("match").innerHTML = 1;
@@ -81,30 +78,25 @@ function frame() {
 
 
 }
-/* (snake.x < apple.x + apple.width &&
-        snake.x + snake.width > apple.x &&
-        snake.y < apple.y + apple.height &&
-        snake.height + snake.y > apple.y)
 
-*/
-window.addEventListener("keypress", changeThingColor);
+window.addEventListener("keypress", moveSnake);
 
-function changeThingColor(event) {
+function moveSnake(event) {
 
     if (event.key === "a" && xstep != 1) {
-        xstep = -1;
+        xstep = -.75;
 
         ystep = 0;
     } else if (event.key === "d" && xstep != -1) {
-        xstep = 1;
+        xstep = .75;
         ystep = 0;
 
     } else if (event.key === "w" && ystep != 1) {
-        ystep = -1;
+        ystep = -.75;
         xstep = 0;
 
     } else if (event.key === "s" && ystep != -1) {
-        ystep = 1;
+        ystep = .75;
         xstep = 0;
     } else if (event, key === "r") {
 
