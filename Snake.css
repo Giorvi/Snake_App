@@ -33,7 +33,11 @@
     text-decoration: none;
     cursor: pointer;
 }
-
+#score{
+    top: 50px;
+    left: 150px;
+    
+}
 #container {
   width: 400px;
   height: 400px;
