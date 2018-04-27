@@ -27,21 +27,6 @@ function randomApple() {
     apple.style.top = appleY + "px";
     apple.style.left = appleX + "px";
 }
-// Giorvi
-function drawSnake() {
-    //Initially the body of the snake will be formed by 5 squares.
-    var length = 4;
-    snake = [];
-
-    //Using a for loop we push the 5 elements inside the array(squares).
-    //Every element will have x = 0 and the y will take the value of the index.
-    for (var i = length; i >= 0; i--) {
-        snake.push({
-            x: i,
-            y: 0
-        });
-    }
-}
 
 //Giorvi
 
@@ -56,7 +41,7 @@ function frame() {
         xstep = 0;
     }
     // Danielle
-    if ((xpos > appleX) && (ypos > appleY)) {
+    if ((xpos = appleX) && (ypos = appleY)) {
         randomApple();
         startingPoints++;
 
@@ -107,7 +92,7 @@ function moveSnake(event) {
     } else if (event.key === "s" && ystep != -1) {
         ystep = .75;
         xstep = 0;
-    } else if (event, key === "r") {
+
 
 
     }
