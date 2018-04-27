@@ -8,9 +8,13 @@ var snake = document.getElementById("snake"),
     ystep = 0,
     id = setInterval(frame, 1);
 //Danielle
+function Score(){
+var startingPoints = Number(document.getElementById('point').innerHTML);
+    startingPoints = startingPoints++;
+        document.getElementById('point').innerHTML = startingPoints;
 
-var startingPoints = document.getElementById('point').innerHTML;
-var startingPoints = 0;
+}
+// var startingPoints = 0;
 var apple = document.getElementById("apple");
 var appleYpos = Math.floor(Math.random() * 350) + 1;
 var appleXpos = Math.floor(Math.random() * 350) + 1;
@@ -43,7 +47,7 @@ function frame() {
     // Danielle
     if ((xpos = appleX) && (ypos = appleY)) {
         randomApple();
-        startingPoints++;
+        Score();
 
     }
     /* if (snake.x < apple.x + apple.width && snake.x + snake.width > apple.x && snake.y < apple.y + apple.height && snake.height + snake.y > apple.y) {
