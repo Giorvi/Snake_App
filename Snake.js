@@ -14,7 +14,6 @@ var startingPoints = Number(document.getElementById('point').innerHTML);
         document.getElementById('point').innerHTML = startingPoints;
 
 }
-// var startingPoints = 0;
 var apple = document.getElementById("apple");
 var appleYpos = Math.floor(Math.random() * 350) + 1;
 var appleXpos = Math.floor(Math.random() * 350) + 1;
@@ -45,24 +44,18 @@ function frame() {
         xstep = 0;
     }
     // Danielle
-    if ((xpos = appleX) && (ypos = appleY)) {
+    if ((xpos >= appleX) && (ypos >= appleY)) {
         randomApple();
         Score();
 
     }
-    /* if (snake.x < apple.x + apple.width && snake.x + snake.width > apple.x && snake.y < apple.y + apple.height && snake.height + snake.y > apple.y) {
-        var yposition = Math.floor(Math.random() * 400) + 1;
-        var xposition = Math.floor(Math.random() * 400) + 1;
-       apple.style.top = yposition + "px";
-        apple.style.left = xposition + "px";
-    } */
-
+// Giorvi
     xpos = xpos + xstep;
     ypos = ypos + ystep;
     snake.style.top = ypos + 'px';
     snake.style.left = xpos + 'px';
 
-
+// Danielle
     if (xpos => appleX && xpos <= (appleX + apple.style.width)) {
         document.getElementById("match").innerHTML = 1;
     } else {
@@ -81,19 +74,19 @@ window.addEventListener("keypress", moveSnake);
 
 function moveSnake(event) {
 
-    if (event.key === "a" && xstep != 1) {
+    if (event.key === "a" && xstep != .75) {
         xstep = -.75;
 
         ystep = 0;
-    } else if (event.key === "d" && xstep != -1) {
+    } else if (event.key === "d" && xstep != -.75) {
         xstep = .75;
         ystep = 0;
 
-    } else if (event.key === "w" && ystep != 1) {
+    } else if (event.key === "w" && ystep != .75) {
         ystep = -.75;
         xstep = 0;
 
-    } else if (event.key === "s" && ystep != -1) {
+    } else if (event.key === "s" && ystep != -.75) {
         ystep = .75;
         xstep = 0;
 
