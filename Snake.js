@@ -6,21 +6,31 @@ var snake = document.getElementById("snake"),
     ypos = 0,
     xstep = 0,
     ystep = 0,
-    id = setInterval(frame, 1),
+    id = setInterval(frame, 1);
+//Danielle
 
-    // Danielle
-    apple = document.getElementById("apple"),
-    appleYpos = Math.floor(Math.random() * 350) + 1,
-    appleXpos = Math.floor(Math.random() * 350) + 1,
-appleX = appleXpos,
-appleY = appleYpos;
-    //apple.style.top = appleYpos + "px";
-    //apple.style.left = appleXpos + "px";
+var startingPoints = document.getElementById('point').innerHTML;
+var startingPoints = 0;
+var apple = document.getElementById("apple");
+var appleYpos = Math.floor(Math.random() * 350) + 1;
+var appleXpos = Math.floor(Math.random() * 350) + 1;
+var appleX = appleXpos;
+var appleY = appleYpos;
+apple.style.top = appleY + "px";
+apple.style.left = appleX + "px";
 
+function randomApple() {
+    appleYpos = Math.floor(Math.random() * 350) + 1;
+    appleXpos = Math.floor(Math.random() * 350) + 1;
+    appleX = appleXpos;
+    appleY = appleYpos;
+    apple.style.top = appleY + "px";
+    apple.style.left = appleX + "px";
+}
 // Giorvi
 function drawSnake() {
     //Initially the body of the snake will be formed by 5 squares.
-   var length = 4;
+    var length = 4;
     snake = [];
 
     //Using a for loop we push the 5 elements inside the array(squares).
@@ -37,25 +47,24 @@ function drawSnake() {
 
 function frame() {
 
-    if (xpos > 350 || xpos < 0) {
+    if (xpos > 370 || xpos < 0) {
         xstep = 0;
         ystep = 0;
     }
-    if (ypos > 350 || ypos < 0) {
+    if (ypos > 370 || ypos < 0) {
         ystep = 0;
         xstep = 0;
     }
-    if (xpos >= appleX && ypos >= appleY) {
-        apple.style.left = appleX + "px";
-        apple.style.top = appleY + "px";
+    // Danielle
+    if ((xpos > appleX) && (ypos > appleY)) {
+        randomApple();
+        startingPoints++;
+
     }
-      /* if (snake.x < apple.x + apple.width &&
-        snake.x + snake.width > apple.x &&
-        snake.y < apple.y + apple.height &&
-        snake.height + snake.y > apple.y) {
+    /* if (snake.x < apple.x + apple.width && snake.x + snake.width > apple.x && snake.y < apple.y + apple.height && snake.height + snake.y > apple.y) {
         var yposition = Math.floor(Math.random() * 400) + 1;
         var xposition = Math.floor(Math.random() * 400) + 1;
-        apple.style.top = yposition + "px";
+       apple.style.top = yposition + "px";
         apple.style.left = xposition + "px";
     } */
 
@@ -65,7 +74,7 @@ function frame() {
     snake.style.left = xpos + 'px';
 
 
-    if (xpos => appleXpos && xpos <= (appleXpos + apple.style.width)) {
+    if (xpos => appleX && xpos <= (appleX + apple.style.width)) {
         document.getElementById("match").innerHTML = 1;
     } else {
         document.getElementById("match").innerHTML = 0;
@@ -78,7 +87,7 @@ function frame() {
 
 
 }
-
+//Giorvi
 window.addEventListener("keypress", moveSnake);
 
 function moveSnake(event) {
