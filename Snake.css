@@ -1,22 +1,23 @@
 .modal {
-    display: none;
+    display:none;
     position: fixed;
     z-index: 1;
     padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(255,255,255,0.9);
+    background-color: aliceblue;
+
 }
 
 .modal-content {
     background-color: white;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid;
+    border-color: deepskyblue;
     width: 80%;
 }
 
@@ -43,10 +44,8 @@
     position:fixed;
     top: 80px;
     left: 350px;
-    
-
-
 }
+
 #container {
   width: 400px;
   height: 400px;
@@ -56,20 +55,20 @@
   border-color:deepskyblue;
 }
 
-#snake {
-  width: 30px;
-  height: 30px;
+#animation1 {
+  width: 0px;
+  height: 0px;
   position: absolute;
-  background: darkgreen;
+  background: orange;
   top: 0px;
   left: 0px;
 }
-#apple {
-    border: 1px solid darkgreen;
-    width: 30px;
-    height: 25px;
-    background-color: red;
-    position: absolute;
-    left: 100px;
-    top: 300px;
+
+#animation2 {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: red;
+  top: 0px;
+  left: 0px;
 }
