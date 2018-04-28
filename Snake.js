@@ -91,11 +91,11 @@ function addPoint () {
    }
 
    function checkCollideBorder() {
-       if (snake.xpos > 350 || snake.xpos < 0) {
+       if (snake.xpos > 375 || snake.xpos < 0) {
            snake.xstep = 0;
            snake.ystep = 0;
        }
-       if (snake.ypos > 350 || snake.ypos < 0) {
+       if (snake.ypos > 375 || snake.ypos < 0) {
            snake.xstep = 0;
            snake.ystep = 0;
        }
