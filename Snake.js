@@ -61,8 +61,8 @@
    var randomX = Math.floor(Math.random() * 350) + 1;
    var randomY = Math.floor(Math.random() * 350) + 1;
 
-   var snake = new Snake(55, 300, 50, 50, 0, 0, "snake");
-   var apple = new Apple(randomX, randomY, 50, 50, "apple");
+   var snake = new Snake(55, 300, 25, 25, 0, 0, "snake");
+   var apple = new Apple(randomX, randomY, 25, 25, "apple");
 
 
    var id = setInterval(frame, 5);
