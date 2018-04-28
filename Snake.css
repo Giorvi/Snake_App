@@ -55,20 +55,24 @@
   border-color:deepskyblue;
 }
 
-#animation1 {
+#snake {
   width: 0px;
   height: 0px;
   position: absolute;
-  background: orange;
+  background: green;
+    border-style: solid 1px;
+    border color: darkgreen;
   top: 0px;
   left: 0px;
 }
 
-#animation2 {
+#apple {
   width: 0px;
   height: 0px;
   position: absolute;
   background: red;
+    border-style: solid 1px;
+    border color: darkred;
   top: 0px;
   left: 0px;
 }
