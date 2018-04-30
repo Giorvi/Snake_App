@@ -3,6 +3,16 @@
        btn = document.getElementById('myBtn'),
        span = document.getElementsByClassName("close")[0];
 
+var endGameModal = document.getElementById("endGame");
+
+function closeGameOverModal() {
+    endGameModal.style.display = "none";
+    startingPoints = 0;
+    document.getElementById('points').innerHTML = startingPoints;
+}
+
+
+
    function Snake(xpos, ypos, width, height, xstep, ystep, id) {
        this.xpos = xpos;
        this.ypos = ypos;
@@ -75,8 +85,8 @@
 
 function addPoint () {
     var startPoint = Number(document.getElementById('point').innerHTML);
-    startPoint++;
-            document.getElementById('point').innerHTML = score;
+    startPoint = startPoint + 1;
+            document.getElementById('point').innerHTML = startPoint;
 
 }
 
@@ -94,10 +104,12 @@ function addPoint () {
        if (snake.xpos > 375 || snake.xpos < 0) {
            snake.xstep = 0;
            snake.ystep = 0;
+           closeGameOverModal()
        }
        if (snake.ypos > 375 || snake.ypos < 0) {
            snake.xstep = 0;
            snake.ystep = 0;
+           closeGameOverModal()
        }
 
        snake.xpos = snake.xpos + snake.xstep;
@@ -139,3 +151,4 @@ function addPoint () {
            snake.changeDirection("right");
        }
    }
+
