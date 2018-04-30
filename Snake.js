@@ -3,16 +3,6 @@
        btn = document.getElementById('myBtn'),
        span = document.getElementsByClassName("close")[0];
 
-var endGameModal = document.getElementById("endGame");
-
-function closeGameOverModal() {
-    endGameModal.style.display = "none";
-    startingPoints = 0;
-    document.getElementById('points').innerHTML = startingPoints;
-}
-
-
-
    function Snake(xpos, ypos, width, height, xstep, ystep, id) {
 
        this.xpos = xpos;
@@ -99,7 +89,7 @@ function addPoint () {
     var startPoint = Number(document.getElementById('point').innerHTML);
     startPoint = startPoint + 1;
             document.getElementById('point').innerHTML = startPoint;
-
+}
    function checkEatApple() {
 
        if (snake.xpos < apple.appleX + apple.width && snake.xpos + snake.width > apple.appleX && snake.ypos < apple.appleY + apple.height && snake.height + snake.ypos > apple.appleY) {
