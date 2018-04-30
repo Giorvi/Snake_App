@@ -1,8 +1,9 @@
-   var score = document.getElementById('point'),
+// Danielle
+var score = document.getElementById('point'),
        modal = document.getElementById('myModal'),
        btn = document.getElementById('myBtn'),
        span = document.getElementsByClassName("close")[0];
-
+// Giorvi
    function Snake(xpos, ypos, width, height, xstep, ystep, id) {
 
        this.xpos = xpos;
@@ -49,7 +50,7 @@
 
        }
    }
-
+// Danielle
    function Apple(appleX, appleY, width, height, appleid) {
 
        this.appleX = appleX;
@@ -68,6 +69,7 @@
 
        }
    }
+// Giorvi
 
    var randomX = Math.floor(Math.random() * 350) + 1,
        randomY = Math.floor(Math.random() * 350) + 1,
@@ -85,6 +87,7 @@
 
    }
 
+// Danielle
 function addPoint () {
     var startPoint = Number(document.getElementById('point').innerHTML);
     startPoint = startPoint + 1;
@@ -121,10 +124,6 @@ function addPoint () {
    }
 
 
-   function checkCollideTail() {
-
-   }
-
    btn.onclick = function () {
        modal.style.display = "block";
    }
@@ -137,6 +136,7 @@ function addPoint () {
        }
    }
 
+// Giorvi
 
    window.addEventListener("keypress", movesnake);
 
